@@ -110,7 +110,7 @@ local MainButton = MainTab:CreateButton({
       },
       friendly = {
           enabled = true,
-          box = false,
+          box = true,
           boxColor = { Color3.new(0,1,0), 1 },
           boxOutline = true,
           boxOutlineColor = { Color3.new(), 1 },
@@ -161,12 +161,12 @@ local MainButton = MainTab:CreateButton({
    end,
 })
 
-local Slider = Tab:CreateSlider({
+local WalkspeedSlider = MainTab:CreateSlider({
    Name = "speed",
-   Range = {0, 100},
-   Increment = 10,
+   Range = {0, 300},
+   Increment = 1,
    Suffix = "Walkspeed",
-   CurrentValue = 10,
+   CurrentValue = 16,
    Flag = "Walkspeed", 
    Callback = function(Value)
    local player = game.Players.LocalPlayer
